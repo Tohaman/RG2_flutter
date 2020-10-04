@@ -1,55 +1,38 @@
 import "package:flutter/material.dart";
+import 'package:flutter_demo/res/themes/app_themes.dart';
+import 'package:scoped_model/scoped_model.dart';
+
+import '../ThemeModel.dart';
 
 class SettingsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: AppBar(title: Text('Инфо')),
-        body: Center(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text("Настройки", style: TextStyle(fontSize: 40))
-              ]
-          ),
-        )
-    );
-  }
-}
-
-/**
-
-class PreferencePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Preferences'),
-      ),
+      appBar: AppBar(title: Text('Инфо')),
+      //ListView c выбором темы
       body: ListView.builder(
         padding: EdgeInsets.all(8),
         itemCount: AppTheme.values.length,
         itemBuilder: (context, index) {
           final itemAppTheme = AppTheme.values[index];
-          return Card(
-            color: appThemeData[itemAppTheme].primaryColor,
-            child: ListTile(
-              title: Text(
-                itemAppTheme.toString(),
-                style: appThemeData[itemAppTheme].textTheme.body1,
-              ),
-              onTap: () {
-                BlocProvider.of<ThemeBloc>(context).dispatch(
-                  ThemeChanged(theme: itemAppTheme),
-                );
-              },
-            ),
+          return ScopedModelDescendant<ThemeModel>(
+            builder: (BuildContext ctx, _, ThemeModel model) {
+              return Card(
+                color: appThemeData[itemAppTheme].primaryColor,
+                child: ListTile(
+                  title: Text(
+                    itemAppTheme.toString(),
+                    style: appThemeData[itemAppTheme].textTheme.bodyText1,
+                  ),
+                  onTap: () {
+                    model.toggleTheme(itemAppTheme);
+                  },
+                ),
+              );
+            }
           );
         },
-      ),
+      )
     );
   }
 }
-
- */
