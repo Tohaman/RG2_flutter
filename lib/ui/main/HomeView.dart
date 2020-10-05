@@ -2,6 +2,8 @@ import "package:flutter/material.dart";
 import 'package:flutter_demo/ui/main/HomeModel.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+import 'detail/DetailView.dart';
+
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,6 +23,10 @@ class HomeView extends StatelessWidget {
                       child: const Text('Press Me'),
                       onPressed: () {
                         model.addCount();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => DetailView()),
+                        );
                       },
                     ),
                   ]
