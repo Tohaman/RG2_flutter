@@ -5,6 +5,7 @@ import 'package:flutter_demo/ui/trainers/TrainerView.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import 'ThemeModel.dart';
+import 'info/Info2View.dart';
 import 'info/InfoView.dart';
 
 class BottomNavBar extends StatefulWidget {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html/html_parser.dart';
 import 'package:flutter_html/style.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class InfoView extends StatefulWidget {
   InfoView({Key key, this.title}) : super(key: key);
@@ -14,7 +15,7 @@ class InfoView extends StatefulWidget {
 
 //<p style="text-align:center"><img src="asset:images/vector.svg" width="20%%"></p>
 const htmlData = """
-
+<p style="text-align:center"><img src="https://rs-dp3.sberbank.kz:8443/PhizIC-res/20.08.3/mobile/img/base/main-menu-transfer.svg" width="50%"></p>
 <h1>Header 1</h1>
 <h2>Header 2</h2>
 <h3>Header 3</h3>
@@ -31,7 +32,7 @@ const htmlData = """
       </p>
       <h3>Support for <code>sub</code>/<code>sup</code></h3>
       Solve for <var>x<sub>n</sub></var>: log<sub>2</sub>(<var>x</var><sup>2</sup>+<var>n</var>) = 9<sup>3</sup>
-      <p>One of the most <span>common</span> equations in all of physics is <br /><var>E</var>=<var>m</var><var>c</var><sup>2</sup>.</p>
+      <p>One of the most <span>common</span> equations in all of physics is <br /><var>E</var>=<var>mc</var><sup>2</sup>.</p>
       <h3>Table support (with custom styling!):</h3>
       <p>
       <q>Famous quote...</q>
@@ -94,11 +95,11 @@ const htmlData = """
       <p>
         Linking to <a href='https://github.com'>websites</a> has never been easier.
       </p>
-      
-     
+
+
       <h3>Image support:</h3>
       <p>
-        <img alt='Google' src='https://www.google.cn/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png' />
+        <img alt='Google' src='https://rs-dp3.sberbank.kz:8443/PhizIC-res/20.08.3/commonSkin/images/payment_service/tovary_uslugi.png' />
         <a href='https://google.com'><img alt='Google' src='https://www.google.cn/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png' /></a>
         <img alt='Alt Text of an intentionally broken image' src='https://www.google.cn/images/branding/googlelogo/2x/googlelogo_color_92x30d' />
       </p>
@@ -121,7 +122,7 @@ class _InfoViewState extends State<InfoView> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        title: Image(image: AssetImage("images/vector.svg")),
+        title: SvgPicture.asset("assets/images/vector.svg"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
