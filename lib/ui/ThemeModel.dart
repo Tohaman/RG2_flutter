@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/Constants.dart';
 import 'package:flutter_demo/res/themes/app_themes.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../Preferences.dart';
 
 class ThemeModel extends Model {
   /// The state of the model.
   ThemeData currentTheme;
 
-  getData() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
+  _saveThemeToSP(int value) async {
+    final preferences = await SharedPreferences.getInstance();
+    await preferences.setInt(THEME_NUMBER, value);
   }
 
   ThemeModel() {
-    currentTheme = appThemeData[AppTheme.OrangeDark];
+    print("Выбрана тема номер - ${Prefer.themeIndexPref}");
+    currentTheme = appThemeData[AppTheme.values[Prefer.themeIndexPref]];
   }
 
   /// Changes the [currentTheme]
-  /// and dependent widgets are notified using [notifyListeners].
+  /// and dependent widgets are notified using [notifyListeners()].
   void toggleTheme(AppTheme theme) {
     currentTheme = appThemeData[theme];
+    _saveThemeToSP(theme.index);
     notifyListeners();
   }
 }
