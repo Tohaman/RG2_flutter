@@ -4,7 +4,8 @@ import 'package:flutter_demo/res/themes/app_themes.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../Preferences.dart';
+import '../Utils.dart';
+
 
 class ThemeModel extends Model {
   /// The state of the model.
@@ -16,8 +17,8 @@ class ThemeModel extends Model {
   }
 
   ThemeModel() {
-    print("Выбрана тема номер - ${Prefer.themeIndexPref}");
-    currentTheme = appThemeData[AppTheme.values[Prefer.themeIndexPref]];
+    print("Выбрана тема номер - ${Utils.themeIndexPref}");
+    currentTheme = appThemeData[AppTheme.values[Utils.themeIndexPref]];
   }
 
   /// Changes the [currentTheme]
