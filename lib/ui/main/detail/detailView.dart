@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'DetailModel.dart';
+import 'detailModel.dart';
 
 class DetailView extends StatelessWidget {
   @override

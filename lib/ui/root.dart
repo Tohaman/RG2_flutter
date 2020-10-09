@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'BottomNavBar.dart';
-import 'ThemeModel.dart';
+import 'bottomNavBar.dart';
+import 'themeModel.dart';
 
 class Root extends StatelessWidget {
   @override

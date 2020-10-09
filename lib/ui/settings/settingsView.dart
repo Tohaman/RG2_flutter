@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import 'package:flutter_demo/res/themes/app_themes.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-import '../ThemeModel.dart';
+import '../themeModel.dart';
 
 class SettingsView extends StatelessWidget {
   @override

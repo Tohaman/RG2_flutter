@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
-import 'package:flutter_demo/ui/main/HomeModel.dart';
+import 'package:flutter_demo/ui/main/homeModel.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-import 'detail/DetailView.dart';
+import 'detail/detailView.dart';
 
 class HomeView extends StatelessWidget {
   @override

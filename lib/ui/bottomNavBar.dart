@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/ui/main/HomeView.dart';
-import 'package:flutter_demo/ui/settings/SettingsView.dart';
-import 'package:flutter_demo/ui/trainers/TrainerView.dart';
+import 'package:flutter_demo/ui/main/homeView.dart';
+import 'package:flutter_demo/ui/settings/settingsView.dart';
+import 'package:flutter_demo/ui/trainers/trainerView.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-import 'ThemeModel.dart';
-import 'info/Info2View.dart';
-import 'info/InfoView.dart';
+import 'themeModel.dart';
+import 'info/info2View.dart';
+import 'info/infoView.dart';
 
 class BottomNavBar extends StatefulWidget {
   @override

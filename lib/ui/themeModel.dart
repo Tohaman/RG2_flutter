@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/Constants.dart';
+import 'package:flutter_demo/constants.dart';
 import 'package:flutter_demo/res/themes/app_themes.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../Utils.dart';
+import '../utils.dart';
 
 
 class ThemeModel extends Model {
