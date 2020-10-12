@@ -4,6 +4,7 @@ import 'package:flutter_demo/ui/settings/settingsView.dart';
 import 'package:flutter_demo/ui/trainers/trainerView.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+import 'main/menuView.dart';
 import 'themeModel.dart';
 import 'info/info2View.dart';
 import 'info/infoView.dart';
@@ -20,7 +21,7 @@ class _BottomNavBar extends State<BottomNavBar> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     Info2View(),
-    HomeView(),
+    MenuView(),
     TrainerView(),
     SettingsView()
   ];

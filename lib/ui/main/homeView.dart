@@ -5,6 +5,7 @@ import 'package:scoped_model/scoped_model.dart';
 import 'detail/detailView.dart';
 
 class HomeView extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return ScopedModel<HomeModel>(

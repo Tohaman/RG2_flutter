@@ -1,15 +1,17 @@
 import 'package:flutter_demo/dataSource/entitys/phases.dart';
 
-class Main3x3 implements Phases {
+class Main3x3 implements Phase {
+  @override
+  int count = title.length;
 
   @override
-  String phase() => "MAIN3X3";
+  String phase = "MAIN3X3";
 
   @override
   List<String> titles()  => title;
 
   @override
-  List<String> images() => image;
+  List<String> icons() => icon;
 
   @override
   List<String> descriptions() => description;
@@ -18,7 +20,7 @@ class Main3x3 implements Phases {
   List<String> urls() => url;
 
   @override
-  List<String> comments() => [];
+  List<String> comments() => List.filled(count, "");
 
 //---------------------------------------------------------------------------
 
@@ -31,7 +33,7 @@ class Main3x3 implements Phases {
     "Узоры на кубике"
   ];
 
-  static const image = [
+  static const icon = [
     "main_1",
     "main_2",
     "main_3",

@@ -2,6 +2,9 @@ import 'dart:io';
 
 import "package:flutter/material.dart";
 import 'package:flutter_demo/constants.dart';
+import 'package:flutter_demo/dataSource/entitys/mainDBItem.dart';
+import 'package:flutter_demo/dataSource/repository.dart';
+import 'package:flutter_demo/di/service_locator.dart';
 import "package:path_provider/path_provider.dart";
 import 'package:shared_preferences/shared_preferences.dart';
 import 'utils.dart';
@@ -14,6 +17,7 @@ Future<void> main() async {
   Utils.docsDir = docsDir;
   Utils.prefs = await SharedPreferences.getInstance();
   Utils.themeIndexPref = Utils.prefs.getInt(THEME_NUMBER) ?? 0;
+  setupLocator();
   runApp(Root());
 }
 
