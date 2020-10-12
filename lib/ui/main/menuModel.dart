@@ -1,7 +1,13 @@
+import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
-import 'package:scoped_model/scoped_model.dart';
+class MenuModel with ChangeNotifier {
+  String _title = "Пример текста";
+  //Геттер для получения title
+  String get title => _title;
 
-class MenuModel extends Model {
-  String title = "Пример текста";
-
+  changeString(String text) {
+    _title = text;
+    notifyListeners();
+  }
 }
