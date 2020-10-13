@@ -32,6 +32,25 @@ class _BottomNavBar extends State<BottomNavBar> {
     });
   }
 
+  static const List <BottomNavigationBarItem> barItems = [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.info_outline_rounded),
+      label: "Инфо",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.menu_book_rounded),
+      label: "Обучалки",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.timer),
+      label: "Тренажеры",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.settings_outlined),
+      label: "Настройки",
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,24 +66,7 @@ class _BottomNavBar extends State<BottomNavBar> {
           unselectedItemColor: Colors.black54,
           selectedItemColor: Colors.black,
           type: BottomNavigationBarType.fixed,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.info_outline_rounded),
-              label: "Инфо",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.menu_book_rounded),
-              label: "Обучалки",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.timer),
-              label: "Тренажеры",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings_outlined),
-              label: "Настройки",
-            ),
-          ],
+          items: barItems,
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
         ),
