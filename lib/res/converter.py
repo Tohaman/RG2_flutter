@@ -4,6 +4,8 @@ VectorDrawable2Svg
 This script convert your VectorDrawable to a Svg
 Author: Alessandro Lucchet
 
+also on Kotlin https://github.com/neworld/vd2svg
+
 Usage: drop one or more vector drawable onto this script to convert them to svg format
 """
 
