@@ -7,7 +7,6 @@ enum AppTheme {
   BlueDark,
   OrangeLight,
   OrangeDark,
-
 }
 
 final appThemeData = {
@@ -33,7 +32,7 @@ final appThemeData = {
   ),
   AppTheme.OrangeDark: ThemeData(
     brightness: Brightness.dark,
-    primaryColor: Colors.orange,
+    primaryColor: Colors.orange[700],
   ),
 
 };

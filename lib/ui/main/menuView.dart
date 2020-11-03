@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/di/service_locator.dart';
 import 'package:flutter_demo/ui/main/menuModel.dart';
 import 'package:provider/provider.dart';
 
@@ -6,7 +7,7 @@ class MenuView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<MenuModel>(
-      create: (context) => MenuModel(),
+      create: (context) => locator<MenuModel>(),
       child: Scaffold(
         body: Center(
           child: MenuWidget(),

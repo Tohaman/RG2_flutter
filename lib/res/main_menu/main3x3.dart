@@ -52,7 +52,7 @@ class Main3x3 implements Phase {
   ];
 
   static const url = [
-    "some url",
+    "",
     "submenu",
     "submenu",
     "submenu",

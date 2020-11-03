@@ -15,7 +15,6 @@ class InfoView extends StatefulWidget {
 
 //<p style="text-align:center"><img src="asset:images/vector.svg" width="20%%"></p>
 const htmlData = """
-<p style="text-align:center"><img src="https://rs-dp3.sberbank.kz:8443/PhizIC-res/20.08.3/mobile/img/base/main-menu-transfer.svg" width="50%"></p>
 <h1>Header 1</h1>
 <h2>Header 2</h2>
 <h3>Header 3</h3>
@@ -99,7 +98,6 @@ const htmlData = """
 
       <h3>Image support:</h3>
       <p>
-        <img alt='Google' src='https://rs-dp3.sberbank.kz:8443/PhizIC-res/20.08.3/commonSkin/images/payment_service/tovary_uslugi.png' />
         <a href='https://google.com'><img alt='Google' src='https://www.google.cn/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png' /></a>
         <img alt='Alt Text of an intentionally broken image' src='https://www.google.cn/images/branding/googlelogo/2x/googlelogo_color_92x30d' />
       </p>
@@ -134,9 +132,9 @@ class _InfoViewState extends State<InfoView> {
               backgroundColor: Colors.black12,
 //              color: Colors.white,
             ),
-//            "h1": Style(
-//              textAlign: TextAlign.center,
-//            ),
+           "h1": Style(
+             textAlign: TextAlign.center,
+           ),
             "table": Style(
               backgroundColor: Color.fromARGB(0x50, 0xee, 0xee, 0xee),
             ),

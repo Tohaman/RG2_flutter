@@ -7,5 +7,5 @@ GetIt locator = GetIt.instance;
 
 void setupLocator() {
   locator.registerSingleton(Repository.instance);
-  locator.registerFactory<MenuModel>(() => MenuModel());
+  locator.registerLazySingleton(() => MenuModel());
 }
